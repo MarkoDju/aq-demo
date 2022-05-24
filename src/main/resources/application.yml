@@ -1,0 +1,22 @@
+micronaut:
+  application:
+    name: aqDemo
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+datasources:
+  default:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    connectionFactoryClassName: oracle.jdbc.pool.OracleDataSource
+    username: aqdemoadmin
+    password: abcd1234
+    schema: xe
+    dialect: ORACLE
+
+logger:
+  levels:
+    io:
+      micronaut:
+        jms: TRACE
